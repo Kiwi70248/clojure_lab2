@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="org.clojure:core.async:0.4.474" type="repository">
+    <properties maven-id="org.clojure:core.async:0.4.474" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/core.async-0.4.474.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/tools.analyzer.jvm-0.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/tools.analyzer-0.6.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/core.memoize-0.5.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/core.cache-0.6.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/data.priority-map-0.0.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/asm-all-4.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/tools.reader-1.0.0-beta4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/clojure-1.7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
