@@ -1,15 +1,9 @@
 (ns untitled1.core)
-(require '[clojure.core.async :refer [<!!] :as async])
+(require '[clojure.core.async :refer [<! <!! >!! >!] :as async])
 
-(def data [2 3 4 4 1 2 3 4 2 1 2])
-(def c (async/into [] (async/to-chan data)))
+(def c (async/chan))
 
-(defn check
-  [x]
-  (loop [data x i (first data) res []]
-    (if (nil? i)
-      res
-      (recur (subvec data (inc i)) (get data (inc i))
-             (conj res (subvec data 1 (inc i)))))))
-
-(async/go (println (check (<! c))))
+(async/go-loop [count 0 res []]
+  (let [i (<! c) temp (dec count)]
+    (recur (if (= temp -1) i temp) (if (= temp -1) (do (println res) []) (conj res i)))))
+(>!! c 1)
