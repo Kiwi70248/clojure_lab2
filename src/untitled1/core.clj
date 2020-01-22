@@ -5,10 +5,11 @@
 (def c (async/into [] (async/to-chan data)))
 
 (defn check
-  [ch]
-  (loop [data (<!! ch) i (first data) res []]
+  [x]
+  (loop [data x i (first data) res []]
     (if (nil? i)
       res
       (recur (subvec data (inc i)) (get data (inc i))
              (conj res (subvec data 1 (inc i)))))))
-(check c)
+
+(async/go (println (check (<! c))))
